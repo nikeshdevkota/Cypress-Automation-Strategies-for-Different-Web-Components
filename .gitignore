@@ -1,0 +1,4 @@
+node_modules/
+cypress/downloads
+cypress/e2e/portal
+cypress/e2e/cms
