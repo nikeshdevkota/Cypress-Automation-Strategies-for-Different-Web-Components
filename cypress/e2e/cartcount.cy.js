@@ -6,7 +6,7 @@ describe("Cart Count",()=>{
         cy.loginwithsession("standard_user","secret_sauce")
     })
 
-    it ("Verify Cart count",()=>{
+    it ("@JIRA-124 Verify Cart count",()=>{
         cy.verifycartcount(3)
     })
 })

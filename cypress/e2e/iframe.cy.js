@@ -7,7 +7,7 @@ describe("test iframes",()=>{
     // beforeEach(function(){
     //     cy.visit("https://demoqa.com/frames")
     // })
-    it("verify iframe test",()=>{
+    it("@JIRA-128 verify iframe test",()=>{
         cy.visit("https://demoqa.com/frames")
         cy.handleiframes("iframe[id='frame1']")
         .find("#sampleHeading")
@@ -16,7 +16,7 @@ describe("test iframes",()=>{
         .find("#sampleHeading")
         .should("have.text","This is a sample page") 
     })
-     it("verify nestediframe test",()=>{
+     it("@JIRA-128 verify nestediframe test",()=>{
         cy.visit("https://demoqa.com/nestedframes")
         cy.getNestedIframeBody("iframe[id='frame1']","iframe[srcdoc$='<p>Child Iframe</p>']")
         .find('p')
