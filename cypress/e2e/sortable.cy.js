@@ -8,7 +8,7 @@ describe("test sortable element",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("@JIRA-130 test sortable",()=>{
+   it("test sortable",{ tags: 'JIRA-130' },()=>{
     cy.get('#demo-tab-list').click(); // Open the List tab
     // cy.get(".vertical-list-container > :nth-child(2)")
     // .drag(".vertical-list-container > :nth-child(4)",{force: true});

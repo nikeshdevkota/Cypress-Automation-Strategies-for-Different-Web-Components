@@ -8,7 +8,7 @@ describe("test tooltip element",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("@JIRA-131 test tooltip",()=>{
+   it("test tooltip",{ tags: 'JIRA-131' },()=>{
     cy.get("#toolTipButton").trigger("mouseover")
     cy.get(".tooltip-inner").should("have.text","You hovered over the Button")
    })

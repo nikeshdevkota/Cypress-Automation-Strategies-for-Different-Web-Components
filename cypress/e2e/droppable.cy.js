@@ -6,7 +6,7 @@ describe("test droppable element",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("@JIRA-127 test droppable",()=>{
+   it("test droppable",{ tags: 'JIRA-127' },()=>{
     cy.get('#draggable')
     .should("have.text","Drag me")
     .drag("#droppable",{force: true})

@@ -5,7 +5,7 @@ describe("test datepicker elements",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("@JIRA-125 test datePickerMonthYearInput",()=>{
+   it("test datePickerMonthYearInput",{ tags: 'JIRA-125' },()=>{
     cy.get("#datePickerMonthYearInput").click()
     cy.datePickerMonthYearInput(
         ".react-datepicker__month-container",
@@ -18,7 +18,7 @@ describe("test datepicker elements",()=>{
     )
    })
 
-   it("@JIRA-125 test datePickerMonthYearInput",()=>{
+   it("test datePickerMonthYearInput",{ tags: 'JIRA-125' },()=>{
     cy.get("#dateAndTimePickerInput").click()
     cy.datePickerTime(
         "April",
