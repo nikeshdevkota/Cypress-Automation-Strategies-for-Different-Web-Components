@@ -12,18 +12,5 @@
     "mochawesome-merge": "^5.0.0",
     "npm-run-all": "^4.1.5",
     "rimraf": "^6.0.1"
-  },
-  "scripts": {
-    "login_chrome": "npx cypress run --browser chrome --spec \"./cypress/e2e/portal/login.cy.js\"",
-    "login_firefox": "npx cypress run  --browser firefox --spec \"./cypress/e2e/login.cy.js\"",
-    "login_edge": "npx cypress run --browser edge --spec \"./cypress/e2e/login.cy.js\"",
-    "merge-reports": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/mochawesome.json",
-    "generate-report": "marge cypress/reports/mochawesome.json",
-    "clean_mochawesome_json": "rimraf cypress/reports/*",
-    "clean_mochawesome_html": "rimraf mochawesome-report/*",
-    "clean_mochawesome": "npm run clean_mochawesome_json && npm run clean_mochawesome_html",
-    "login_parallel_cross_browser": "npm-run-all --parallel clean_mochawesome login_chrome login_chrome_1 && npm run merge-reports && npm run generate-report",
-    "smoke_test": "npx cypress run --env grepTags=@smoke --browser chrome",
-    "smoke_report": "npm run clean_mochawesome && npm run smoke_test && npm run merge-reports && npm run generate-report"
   }
 }

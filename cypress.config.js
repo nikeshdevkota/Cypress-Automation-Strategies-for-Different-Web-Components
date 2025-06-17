@@ -1,6 +1,4 @@
-const { defineConfig } = require("cypress");
-const cmsBaseUrl = 'https://stage-cms.onewardrobe.com.au'
-const webappBaseUrl = "https://onewardrobe.com.au"
+const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
   e2e: {
@@ -17,8 +15,6 @@ module.exports = defineConfig({
     env: {
       grepFilterSpecs: true
     },
-    // specPattern:  "cypress/e2e/*.cy.js",
-    baseUrl: process.env.target === "cms" ? cmsBaseUrl: webappBaseUrl,
     defaultCommandTimeout:10000,
     pageLoadTimeout:60000,
     requestTimeout:10000,
