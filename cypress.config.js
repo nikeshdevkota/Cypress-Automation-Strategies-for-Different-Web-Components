@@ -1,12 +1,10 @@
 const { defineConfig } = require("cypress")
-const grepTags = require('cypress-grep/src/plugin')
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      grepTags(on, config)
-      return config
+      require('@cypress/grep/src/plugin')(config);
+      return config;
     },
     reporter: 'cypress-multi-reporters',
     reporterOptions: {
