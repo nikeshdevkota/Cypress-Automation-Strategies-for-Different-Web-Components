@@ -8,7 +8,7 @@ describe("test accordian element",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("test accordian",()=>{
+   it("@JIRA-121 test accordian",()=>{
     cy.accordian(0,'not.be.visible')
     cy.accordian(0,'be.visible')
    })

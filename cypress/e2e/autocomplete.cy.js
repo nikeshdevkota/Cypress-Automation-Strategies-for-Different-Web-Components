@@ -8,7 +8,7 @@ describe("test autocomplete element",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("test auto-complete",()=>{
+   it("@JIRA-123 test auto-complete",()=>{
     cy.autocomplete(
         ".auto-complete__value-container--is-multi",
         "bl",".auto-complete__menu-list",

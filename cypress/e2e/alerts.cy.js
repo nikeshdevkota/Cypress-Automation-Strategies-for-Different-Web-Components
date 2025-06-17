@@ -9,7 +9,7 @@ describe("test alerts and popups",()=>{
         cy.visit("https://demoqa.com/alerts")
     })
 
-    it("test alert",()=>{
+    it("@JIRA-122 test alert",()=>{
         cy.get(".row").find(".col").find("[type ='button']").contains("Click me").click()
         cy.on('window:alert',(text)=>{
             expect(text).to.eq("You clicked a button")
@@ -17,7 +17,7 @@ describe("test alerts and popups",()=>{
         })       
     })
 
-    it("test confirm",()=>{
+    it("@JIRA-122 test confirm",()=>{
         cy.get(".mt-4.row").find(".col").find("#confirmButton").contains("Click me").click()
         cy.on('window:alert',(text)=>{
             expect(text).to.eq("Do you confirm action?")
@@ -25,7 +25,7 @@ describe("test alerts and popups",()=>{
         })       
     })
 
-    it("test prompt",()=>{
+    it("@JIRA-122 test prompt",()=>{
         cy.window().then(win => {
             cy.stub(win, 'prompt').returns('CypressUser')
         }) 

@@ -8,7 +8,7 @@ describe("test modal elements",()=>{
         Cypress.on('uncaught:exception', () => false)
     })
 
-   it("test modal",()=>{
+   it("@JIRA-129 test modal",()=>{
     cy.get("#showSmallModal").contains("Small modal").click()
     cy.get(".modal-content").within(()=>{
         cy.get(".modal-header").contains("Small Modal")
